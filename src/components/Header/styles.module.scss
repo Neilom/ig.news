@@ -1,0 +1,68 @@
+.headerContainer{
+    height: 5rem; /* Essa é a alturado do cabeçalho, sendo 5*16px = 80px */
+    border-bottom: 1px solid var(--gray-300); 
+    /* linha na parte inferior do cabeçalho */
+
+}
+
+.headerContent{
+    max-width: 1120px; /* é para ela ocupar um limite máximo na tela */
+    height: 5rem; /* Mesma altura do de cima */
+    margin: 0 auto;
+    padding: 0 2rem; /* Isso é para a pessoa diminuir a tela e não ficar sem um
+    espaço na lateral */
+    
+    display: flex;
+    align-items: center; 
+    /* Esse dois comandos são feitos juntos para alinhar o conteúdo
+    ao centro verticalemente */
+
+    nav{
+        margin-left: 5rem; /* Margem do logo */
+        height: 5rem;
+
+        a{
+            display: inline-block;
+            position: relative;
+            padding: 0 0.5rem; /* faz a separação na vertical dos itens(texto) */
+            height: 5rem;
+            line-height: 5rem;
+
+
+            color: var(--gray-300);
+            
+            transition: color 0.2s;
+
+            & + a {
+                margin-left: 2rem;
+            }
+
+
+            &:hover{
+                color: var(--white);
+            }
+
+            &.active {
+                color: var(--white);
+                font-weight: bold;
+            }
+
+            &.active::after{
+                content: '';
+                height: 3px;
+                border-radius: 3px 3px 0 0;
+                width: 100%;
+                position: absolute;
+                bottom: 1px;
+                left: 0;
+                background: var(--yellow-500);
+                
+            }
+        }
+
+    }
+
+    button {
+        margin-left: auto;
+    }
+}
