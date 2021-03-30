@@ -13,7 +13,9 @@ export function Header() {
     /* Aqui é colocado todo o HTML do meu componente */
     <header className={stytes.headerContainer}>
       <div className={stytes.headerContent}>
-        <img src="/images/ig.news.svg" alt="ig.news" />
+        <a href="/">
+          <img src="/images/ig.news.svg" alt="ig.news" />
+        </a>
         <nav>
           <ActiveLink activeClassName={stytes.active} href="/">
             <a>Home</a>
