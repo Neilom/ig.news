@@ -6,26 +6,26 @@ import { useRouter } from 'next/router'
 import { ActiveLink } from '../ActiveLink'
 
 
-export function Header(){
-    const {asPath} = useRouter()
+export function Header() {
+  const { asPath } = useRouter()
 
-    return(
-        /* Aqui é colocado todo o HTML do meu componente */
-        <header className = {stytes.headerContainer}>
-            <div className = {stytes.headerContent}>
-                <img src="/images/ig.news.svg" alt="ig.news"/>
-                <nav>
-                    <ActiveLink activeClassName={stytes.active} href="/">
-                        <a>Home</a>
-                    </ActiveLink>
+  return (
+    /* Aqui é colocado todo o HTML do meu componente */
+    <header className={stytes.headerContainer}>
+      <div className={stytes.headerContent}>
+        <img src="/images/ig.news.svg" alt="ig.news" />
+        <nav>
+          <ActiveLink activeClassName={stytes.active} href="/">
+            <a>Home</a>
+          </ActiveLink>
 
-                    <ActiveLink activeClassName={stytes.active} href="/posts"> 
-                        <a>Post</a>
-                    </ActiveLink>
-                </nav>
+          <ActiveLink activeClassName={stytes.active} href="/posts">
+            <a>Post</a>
+          </ActiveLink>
+        </nav>
 
-                <SingInButton />
-            </div>
-        </header>
-    )
+        <SingInButton />
+      </div>
+    </header>
+  )
 }
